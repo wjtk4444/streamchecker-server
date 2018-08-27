@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StreamChecker - Available plugins</title>
+    </head>
+    
+    <body>
+        <h1>List of available plugins:</h1>
+        {% for plugin in plugins %}
+            Name: <b>{{plugin.getName()}}</b> </br>
+            Description: {{plugin.getDescription()}} </br>
+            <a href="{{plugin.getName()}}">Api endpoint</a> </br></br>
+        {% endfor %}
+    </body>
+    
+</html>

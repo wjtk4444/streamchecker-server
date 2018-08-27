@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StreamChecker - API</title>
+    </head>
+    
+    <body>
+        You can see available plugins (api endpoints) <a href='/api/plugins'>here</a></br>
+        This url is an api endpoint too.</br></br>
+
+        Request schemas:</br></br>
+       
+        &nbsp&nbsp&nbsp&nbspFor this url:</br></br
+        >
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp POST request,</br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp body = {</br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 'auth_token' : 'your_unique_access_token',</br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 'streams' : [ 'array', 'of', 'urls', 'to', 'streams' ]</br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</br></br>
+
+
+        &nbsp&nbsp&nbsp&nbspFor /plugin/plugin_name urls:</br></br>
+
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp POST request,</br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp body = {</br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 'auth_token' : 'your_unique_access_token',</br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 'streams' : [ 'array', 'of', 'usernames', 'of', 'streamers' ]</br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp }</br></br>
+        
+    </body>
+
+    <footer>
+        Go <a href='/'>home</a> 
+    </footer>
+</html>

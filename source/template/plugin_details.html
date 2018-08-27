@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StreamChecker - Plugin details</title>
+    </head>
+    
+    <body>
+        Name: <b>{{plugin.getName()}}</b>
+        </br>
+        Description: {{plugin.getDescription()}}
+        </br>
+        Url: {{plugin.getUrl()}}
+        </br>
+        SupportedUrlRegex: {{plugin.getSupportedUrlRegex()}}
+        </br>
+        Icon: <a href="{{plugin.getIconUrl()}}">{{plugin.getIconUrl()}}</a>
+        </br>
+        </br>
+        API endpoint: <a href="/api/plugins/{{plugin.getName()}}">/api/plugins/{{plugin.getName()}}</a>
+        </br>
+        (same as this url, you need to make a POST request - see <a href="/api">/api</a> for more details)
+    </body>
+</html>
