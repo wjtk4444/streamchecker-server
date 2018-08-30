@@ -108,7 +108,9 @@ def api_plugins_plugin_post(plugin_name):
             streams = data['streams']
         except:
             return jsonify({'error' : 'bad request', 'streams' : None})
-    
+    else:
+        return jsonify({'error' : 'bad request', 'streams' : None})
+
     database_tokens.execute('SELECT expiry_date FROM tokens WHERE auth_token=?', (auth_token,))
     result = database_tokens.fetchone()
     if(result == None):
@@ -139,7 +141,9 @@ def api_auto_post():
             auth_token = data['auth_token']
             streams = data['streams']
         except:
-            return jsonify({'error' : 'bad request', 'streams' : None})
+            return jsonify({'error' : 'bad request', 'streams' : None}) 
+    else:
+        return jsonify({'error' : 'bad request', 'streams' : None})
     
     database_tokens.execute('SELECT expiry_date FROM tokens WHERE auth_token=?', (auth_token,))
     result = database_tokens.fetchone()
@@ -174,6 +178,6 @@ def api_auto_post():
 
 ########
 # MAIN #
-#######
+########
 if __name__ == '__main__':
     app.run(debug=True, port='1234')
